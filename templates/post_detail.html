@@ -95,7 +95,7 @@
             <div class="card-body">
                 <!-- For later -->
                 {% if commented %}
-                <div class="alert alert-success" id="awaiting" role="alert">
+                <div class="alert alert-success" id="msg" role="alert">
                     Your comment is awaiting approval
                 </div>
                 {% else %}
@@ -114,13 +114,5 @@
         </div>
     </div>
 </div>
-
-<script>
-    setTimeout(function(){
-        let alertSucces = document.getElementById("awaiting");
-        let alert = new bootstrap.Alert(alertSucces);
-        alert.close();
-    }, 3000);
-</script>
 
 {% endblock content %}
