@@ -18,6 +18,7 @@
     </script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+    <script src="https://kit.fontawesome.com/ca2cfe0f86.js" crossorigin="anonymous"></script>
     
 </head>
 
@@ -27,8 +28,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">c<span class="red-o">o</span>de<span
-                        class="thin">|star</span></span></span></a>
+            <a class="navbar-brand" href="{% url 'home' %}"><span class="brand">A</span><span class="blue-v">v</span><span>ia</span><span class="thin">Blog</span></span></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                        <a class="nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
@@ -52,7 +52,7 @@
                     {% endif %}
                 </ul>
                 <span class="navbar-text text-muted">
-                    adventures of a software developer
+                    Adventures of a Commercial Pilot
                 </span>
             </div>
         </div>
@@ -63,7 +63,7 @@
         <div class="row">
             <div class="col-md-8 offset-md-2">
                 {% for message in messages %}
-                <div class="msgg alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                     {{ message | safe }}
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
@@ -79,12 +79,13 @@
     </main>
 
     <!-- Footer -->
-    <footer class="footer mt-auto py-3 dark-bg">
-        <p class="m-0 text-center text-white">Made by Code Instituters</p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i></p>
+    <footer class="footer mt-auto py-3 bg-white">
+        <p class="footer-text m-0 text-center">Made by a Coding Aviator</p>
+        <p class="footer-text m-0 text-center">Follow us: 
+            <a target="_blank" href="https://www.facebook.com/groups/1521149284691555"><i class="socials fa-brands fa-square-facebook"></i></i></a>
+            <a target="_blank" href="https://twitter.com/aviator_aero"><i class="socials fa-brands fa-square-twitter"></i></i></a>
+            <a target="_blank" href="https://www.instagram.com/aviatorszone/?hl=en"><i class="socials fa-brands fa-square-instagram"></i></a>
+            <a target="_blank" href="https://www.youtube.com/@alwaysaviation6836"><i class="socials fa-brands fa-square-youtube"></i></p></a>
     </footer>
 
 </body>

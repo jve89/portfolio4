@@ -1,20 +1,24 @@
-body {
-    background-color: #F9FAFC;
+span {
+    margin: 0;
 }
 
 .brand {
     font-family: Lato, sans-serif;
-    font-size: 1.4rem;
-    font-weight: 700;
+    font-size: 1.3rem;
+    font-weight: 600;
     color: #4A4A4F;
 }
 
-.red-o {
-    color: #E84610;
+.blue-v {
+    color: #0011ff;
 }
 
 .thin {
     font-weight: 300;
+}
+
+.thick {
+    font-weight: bold;
 }
 
 .light-bg {
@@ -139,4 +143,50 @@ body {
     color: #E84610;
     background: transparent;
     border: none;
+}
+
+/* Nav */
+
+.navbar {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Body */
+
+body {
+    background-color: #F9FAFC;
+}
+
+.main-bg {
+    background-color: whitesmoke;
+}
+
+/* Footer */
+
+.footer {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer-text {
+    color: black;
+}
+
+.socials {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+/* Element alignment */
+
+.cont-align {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+.btn-align {
+    margin: 0;
+    position: relative;
 }
