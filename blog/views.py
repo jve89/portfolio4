@@ -1,23 +1,14 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
-from .models import Category, Post, Comment
+from .models import About, Post, Comment
 from .forms import CommentForm
-
-
-def category(request):
-    return render(request, 'category.html')
+from django.utils.text import slugify
+from django.shortcuts import redirect
 
 
 def about(request):
     return render(request, 'about.html')
-
-
-class PostCategory(generic.ListView):
-    model = Category
-    queryset = Category.objects.order_by('name').values()
-    template_name = "category.html"
-    paginate_by = 6
 
 
 class PostList(generic.ListView):
@@ -92,3 +83,28 @@ class PostLike(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('post_detail', args=[slug]))
+
+
+class PostAbout(View):
+    
+    def get(self, request, *args, **kwargs):
+        return render(request, 'about.html', 
+                      {"form": AboutForm()})
+    
+    def post(self, request, *args, **kwargs):
+
+        about_form = AboutForm(request.POST, request.FILES)
+
+        if about_form.is_valid():
+            about_form.instance.user = request.user
+            about = profile_form.save(commit=False)
+            about.save()
+            return redirect('user_about', username=about.user.username)
+
+        return render(
+            request,
+            "about.html",
+            {
+                "form": about_form,
+            },
+        )

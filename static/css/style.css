@@ -201,3 +201,11 @@ body {
         display: none;
     }
 }
+
+/* About */
+
+.headdiv {
+    width: auto;
+    text-align: center;
+    padding-top: 25px;
+}

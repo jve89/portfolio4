@@ -7,11 +7,12 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=200, unique=True)
-    slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, 
-                               related_name="blog_posts")
-    featured_image = CloudinaryField('image', default='placeholder')
+    title = models.CharField(max_length=225, unique=True)
+    slug = models.SlugField(max_length=225, unique=True)
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="blog_posts"
+    )
+    featured_image = CloudinaryField('image')
     excerpt = models.TextField(blank=True)
     updated_on = models.DateTimeField(auto_now=True)
     content = models.TextField()
@@ -30,16 +31,6 @@ class Post(models.Model):
         return self.likes.count()
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=200, unique=True)
-    featured_image = CloudinaryField('image', default='placeholder')
-    post = models.ForeignKey(Post, on_delete=models.CASCADE,
-                             related_name="category")
-
-    def __str__(self):
-        return self.name
-
-
 class Comment(models.Model):
     post = models.ForeignKey(Post, on_delete=models.CASCADE,
                              related_name="comments")
@@ -54,4 +45,16 @@ class Comment(models.Model):
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"
-        
+
+
+class About(models.Model):
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="about"
+    )
+    name = models.CharField(max_length=80)
+    text = models.TextField()
+    image = CloudinaryField('img')
+    status = models.IntegerField(choices=STATUS, default=0)
+
+    def __str__(self):
+        return self.name

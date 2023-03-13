@@ -1,17 +1,15 @@
 from django.contrib import admin
-from .models import Post, Comment, Category
+from .models import Post, Comment, About
 from django_summernote.admin import SummernoteModelAdmin
 
 
-@admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
-    list_display = ('name',)
-    list_filter = ('name',)
-    search_fields = ('name', 'body')
-    actions = ['approve_category']
+@admin.register(About)
+class AboutAdmin(SummernoteModelAdmin):
 
-    def approve_category(self, request, queryset):
-        queryset.update(approved=True)
+    list_display = ('user', 'name', 'text', 'image')
+    search_fields = ('user', 'name', 'text')
+    list_filter = ('user', 'name')
+    summernote_fields = ('content')
 
 
 @admin.register(Post)

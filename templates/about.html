@@ -1,5 +1,80 @@
-{% extends "base.html" %}
+{% extends "base.html" %} 
 
 {% block content %}
-    
+
+{% load static %}
+
+<div class="headdiv">
+    <h1 class="about-header">Welcome {{ user.username }} to AviaBlog!</h1>
+</div>
+<br>
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="about-us-short">
+          <h4>Who are we?</h4>
+            <p class="who-are-we-p">
+                We are a group of hobby enthusiasts who want others to share their interests to inspire people to try out new hobbies.
+            </p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="about-call-to-action">
+          <h4>What we want:</h4>
+          <p class="what-we-want-p">Please join our community to start sharing your interest with others, perhaps you learn something new?</p>
+        </div>
+      </div>
+  </div>
+  <br>
+  <br>
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          <div class="col col-md">
+            <h3 class="about-us-header">The Story About Us:</h3>
+          </div>
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+        <div class="accordion-body">
+          <p> {{ user.username }}. You might wanna know our story and the reason behind we started this project is
+            that hobbies can sometimes be difficult to find what is right for you and using <strong>Hobby
+              Share</strong> as a community will make it easier for you to be introduced to trying something new. Today people
+            are often getting overwhelmed by all sorts of information either from social media, news, or things on daily basis. We want to make it
+              easier for people to see what is out there and get inspired to start with a new hobby. </p> <br>
+              <p><strong>Hobby Share</strong> was established in the late 1990s in Manhattan,New York as a brick-and-mortar store. <br> Where book clubs were renting the place and organized
+                events to share their most trending books with potential customers. A couple of years later the user behavior changed profoundly since the internet became a
+                powerful source of communication and the market choose organizations like Amazon to get all the introductions of the
+                best-selling books online as well as able to make a purchase. It made us rethink our business strategy and we wanted to
+                create something new for our market. That is how we came up with the idea that if people can share their hobbies online it will create
+                a sense of gathering point. </p><br>
+              <p>Thus, not only books but interest of any kind is a great place to get to know each other. Today
+                people are receiving
+                all sorts of information from social media and other websites that can be very overwhelming for some
+                people, but a
+                platform like Hobby Share is able to create a channel for sharing ideas. Most importantly create an
+                online community.
+            </p</div>
+        </div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <img src="https://images.pexels.com/photos/5699509/pexels-photo-5699509.jpeg?auto=compress&cs=tinysrgb&w=800" class="img-thumbnail" alt="Vinyl">
+            </div>
+            <div class="col">
+              <img src="https://images.pexels.com/photos/6039249/pexels-photo-6039249.jpeg?auto=compress&cs=tinysrgb&w=800" class="img-thumbnail" alt="Skateboard">
+            </div>
+            <div class="col">
+              <img src="https://images.pexels.com/photos/4861373/pexels-photo-4861373.jpeg?auto=compress&cs=tinysrgb&w=800" class="img-thumbnail" alt="Reading">
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 {%endblock%}
