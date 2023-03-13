@@ -14,8 +14,8 @@ def about(request):
 
 
 class PostCategory(generic.ListView):
-    model = Post
-    queryset = Post.objects.filter(status=1).order_by('category').values()
+    model = Category
+    queryset = Category.objects.order_by('name').values()
     template_name = "category.html"
     paginate_by = 6
 
