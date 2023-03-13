@@ -5,10 +5,18 @@ from .models import Category, Post, Comment
 from .forms import CommentForm
 
 
+def category(request):
+    return render(request, 'category.html')
+
+
+def about(request):
+    return render(request, 'about.html')
+
+
 class PostCategory(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by('category').values()
-    template_name = "index.html"
+    template_name = "category.html"
     paginate_by = 6
 
 
