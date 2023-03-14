@@ -38,7 +38,12 @@
       </h2>
       <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
         <div class="accordion-body">
-          <p> {{ user.username }}. You might wanna know our story and the reason behind we started this project is
+          <h2>{{  text  }}</h2>
+          {% for post in posts  %}
+            <h1>{{  post.name  }}</h1>
+            <p>{{  post.post  }}</p>
+          {%  endfor  %}
+            <!-- <p> {{ user.username }}. You might wanna know our story and the reason behind we started this project is
             that hobbies can sometimes be difficult to find what is right for you and using <strong>Hobby
               Share</strong> as a community will make it easier for you to be introduced to trying something new. Today people
             are often getting overwhelmed by all sorts of information either from social media, news, or things on daily basis. We want to make it
@@ -55,10 +60,10 @@
                 people, but a
                 platform like Hobby Share is able to create a channel for sharing ideas. Most importantly create an
                 online community.
-            </p</div>
+            </p</div> -->
         </div>
 
-        <div class="container">
+        <!-- <div class="container">
           <div class="row">
             <div class="col">
               <img src="https://images.pexels.com/photos/5699509/pexels-photo-5699509.jpeg?auto=compress&cs=tinysrgb&w=800" class="img-thumbnail" alt="Vinyl">
@@ -70,11 +75,11 @@
               <img src="https://images.pexels.com/photos/4861373/pexels-photo-4861373.jpeg?auto=compress&cs=tinysrgb&w=800" class="img-thumbnail" alt="Reading">
             </div>
           </div>
-        </div>
+        </div> -->
         
       </div>
     </div>
   </div>
 </div>
 
-{%endblock%}
+{% endblock %}

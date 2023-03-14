@@ -6,9 +6,9 @@ from django_summernote.admin import SummernoteModelAdmin
 @admin.register(About)
 class AboutAdmin(SummernoteModelAdmin):
 
-    list_display = ('user', 'name', 'text', 'image')
-    search_fields = ('user', 'name', 'text')
-    list_filter = ('user', 'name')
+    list_display = ('user', 'name', 'post', 'status')
+    search_fields = ('user', 'name', 'status')
+    list_filter = ('user', 'name', 'status')
     summernote_fields = ('content')
 
 

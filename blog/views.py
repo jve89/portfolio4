@@ -2,13 +2,13 @@ from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import About, Post, Comment
-from .forms import CommentForm
+from .forms import CommentForm, AboutForm
 from django.utils.text import slugify
 from django.shortcuts import redirect
 
 
-def about(request):
-    return render(request, 'about.html')
+# def about(request):
+#     return render(request, 'about.html')
 
 
 class PostList(generic.ListView):
@@ -86,25 +86,27 @@ class PostLike(View):
 
 
 class PostAbout(View):
-    
+    template_name = 'about.html'
+
     def get(self, request, *args, **kwargs):
-        return render(request, 'about.html', 
-                      {"form": AboutForm()})
-    
+        form = AboutForm()
+        posts = About.objects.all()
+
+        args = {'form': form, 'posts': posts}
+        return render(request, self.template_name, args)
+
     def post(self, request, *args, **kwargs):
+        form = AboutForm(request.POST)
 
-        about_form = AboutForm(request.POST, request.FILES)
+        if form.is_valid():
+            post = form.save(commit=False)
+            post.user = request.user
+            post.save()
 
-        if about_form.is_valid():
-            about_form.instance.user = request.user
-            about = profile_form.save(commit=False)
-            about.save()
-            return redirect('user_about', username=about.user.username)
+            text = form.cleaned_data['post']
+            form = AboutForm()
+            return redirect('templates:templates')
 
-        return render(
-            request,
-            "about.html",
-            {
-                "form": about_form,
-            },
-        )
+        args = {'form': form, 'text': text}
+
+        return render(request, self.template_name, args)
