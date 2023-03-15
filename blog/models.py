@@ -52,7 +52,7 @@ class About(models.Model):
         User, on_delete=models.CASCADE, related_name="about"
     )
     name = models.CharField(max_length=80, unique=True)
-    post = models.TextField(max_length=500)
+    post = models.TextField()
     status = models.IntegerField(choices=STATUS, default=0)
 #     name = models.CharField(max_length=80, unique=True)
 #     post = models.TextField()
