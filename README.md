@@ -1,108 +1,102 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# __AviaBlog__
 
-Welcome jve89,
+Welcome to the Aviablog website! This website is designed to quickly give you an overview of the most interesting articles in the world of aviation. The website has been partly written in the Python language using the Django framework.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Aviablog Logo](IMG/python.welcome.png)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
 
-## Gitpod Reminders
+## __Features__
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+In this chapter, I will go over the AviaBlog website existing features and future features that still need to be implemented. The features can be explained on the basis of the following flow chart:
 
-`python3 -m http.server`
+![Aviablog Website flow chart](IMG/fllowchart.png)
 
-A blue button should appear to click: _Make Public_,
+### __Existing features__
 
-Another blue button should appear to click: _Open Browser_.
+- __The home screen__
+  
+The home screen of the website is rather simple but useful. The main purpose of the website is to give you an overview of the latest aviation news and this is being presented to you in the form of the latest 6 articles. 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+A clean but simple nav bar is presented with 4 buttons. Namely the Home, About, Register and Login button. As soon as you are logged in, the layout changed to 3 buttons, namely the Home, About and Logout button.
 
-A blue button should appear to click: _Make Public_,
+A nice little touch is given with the website's logo in the top left corner, and the website's slogan in the top right corner of the screen, which reads: 'Adventures of a Commercial Pilot'. 
 
-Another blue button should appear to click: _Open Browser_.
+The website's footer consists of a simple menu bringing the user to the AviaBlog social media platforms. A little note has to be made that the links are currently consisting of different platforms than Aviablog because we are still in the startup phase. 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![The Aviablog website home screen](IMG/heroku.startscreen.png)
 
-To log into the Heroku toolbelt CLI:
+- __The about screen__
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+The about screen is interesting in particular. Not only because of the interesting information that can be found here about Aviablog, but also in the way it has been coded. A standard greeting, and a little explanation of who we are and what we want is directly visible. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+Underneath, it becomes more interesting. The user can read about our story by clicking a dropdown menu. Ater clicking the dropdown menu, the story that is being shown can be easily changed by the admin of the website by simply going to the admin environment and clicking on the abouts tap. Because the world of aviation is changing so fast, we decided to make the story about us adjustable very easily.
 
-------
+![The Aviablog website about screen](IMG/heroku.generatingscreen.png)
 
-## Release History
+- __The register screen__
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+The register screen is rather simple as well. The user is being asked to provide us with a username of their choice, optionally their email address, their password, and a confirmation of their password. The user is also reminded that in case they are already signed up with us, they have to click the sign in link instead. The model of this screen has been written by code institute but the layout has been modified in CSS by me.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+  ![The Aviablog website register screen](IMG/heroku.questionscreen.png)
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- __The login screen__
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+The login screen also reminds the user of registering first if this has not been done before. In case the user has already been registered, it's easy to gain access by filling in the username and password. A handy remind me checkbox has been added as well. This part of the website has also been written by code institute. Again, the layout has been modified to meet the AviaBlog standards. 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+After logging in, an alert message will appear for 2.5 seconds letting the user know the login has been successful.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+  ![The Aviablog website login screen](IMG/heroku.questionscreen.png)
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+- __The logout screen__
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The logout screen only consists of a question if the user is sure he or she wants to logout? If this is the case, a big green sign out bar have to be clicked. 
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+    ![The Aviablog website login screen](IMG/heroku.questionscreen.png)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+### __Features left to implement__
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+In this chapter, I will describe some of the features that are not implemented at this moment, but will possibly be implemented in the future. 
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+  - A 'forgot my password' option on the login screen.
+  - An extra nav option called 'categories', where the user can search articles in certain different categories.
+  - Video support for a vlogging divison of AviaBlog.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+## __Testing__
 
-------
+The application have both been fully tested inside the gitpod environment as well as in the heroku environment. No unexpected behavior have been encountered. No error messages have been raised.
 
-## FAQ about the uptime script
+### __Unfixed bugs__
 
-**Why have you added this script?**
+ The application has no serious bugs. However, the code could use some tidying up in the future. The reason is a lack of time to make it to the deadline of submitting the project.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
 
-**How will this affect me?**
+## __Deployment__
+- The site was deployed to Heroku. The steps to deploy are as follows:
+  - Created an account using my personal email address (johanvanerkel@gmail.com) and selected 'create new app' from the home screen.
+  - Chose the following app name: portfolio-4-blog and selected 'Europe' as region.
+  - Selected the right settings as explained in walk through project videos.
+  - Deployed project by connecting my heroky account to my github account (same email address used for github)
+  - Heroku generated a web address to visit the web application which I will state here:
+    https://portfolio-4-blog.herokuapp.com/
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+## __Credits__
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+The idea to keep my project simple came from my mentor. She said it's a good option to make use of the 'I think therefore I blog' walkthrough project as some sort of a basis for my own project. Since my lack of time, I think this has been a wise choice. I learned a lot about coding during this project and I'm starting to see how a django powered project falls on it's place. There's a lot more work to do though! I therefore really hope I pass this project, so I can look forward to the next part of the course.
 
-**So….?**
+For research and support, I also used the following websites:
+- https://www.w3schools.com/ (used to gather information)
+- https://developer.mozilla.org/ (used to gather information) 
+- https://stackoverflow.com/ (forum for asking questions)
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+I also got information from Youtube. My favorite used youtube channels are as follows:
+- Programming with Mosh
+- Web Dev Simplified
+- freeCodeCamp.org
 
-**Can I opt out?**
+## __Epilogue__
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Thank you for taking the time to read through this README, my code and of course the end result of the Aviablog website. I hope you find the end result inspiring as well!
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
