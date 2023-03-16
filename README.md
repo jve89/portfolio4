@@ -69,7 +69,7 @@ In this chapter, I will describe some of the features that are not implemented a
 
 ## __Testing__
 
-The application have both been fully tested inside the gitpod environment as well as in the heroku environment. No unexpected behavior have been encountered. No error messages have been raised.
+The application have both been fully tested inside the gitpod environment as well as in the heroku environment. No unexpected behavior have been encountered. No error messages have been raised. The project complies with the minimum of 1 original model that has been imoplemented by me which I called the 'About' model. 
 
 ### __Unfixed bugs__
 
@@ -81,7 +81,7 @@ The application have both been fully tested inside the gitpod environment as wel
   - Created an account using my personal email address (johanvanerkel@gmail.com) and selected 'create new app' from the home screen.
   - Chose the following app name: portfolio-4-blog and selected 'Europe' as region.
   - Selected the right settings as explained in walk through project videos.
-  - Deployed project by connecting my heroky account to my github account (same email address used for github)
+  - Deployed project by connecting my heroku account to my github account (same email address used for github)
   - Heroku generated a web address to visit the web application which I will state here:
     https://portfolio-4-blog.herokuapp.com/
 
