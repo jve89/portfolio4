@@ -2,14 +2,14 @@
 
 Welcome to the Aviablog website! This website is designed to quickly give you an overview of the most interesting articles in the world of aviation. The website has been partly written in the Python language using the Django framework.
 
-![Aviablog Logo](IMG/python.welcome.png)
+![Aviablog Logo](./media/logo.png)
 
 
 ## __Features__
 
 In this chapter, I will go over the AviaBlog website existing features and future features that still need to be implemented. The features can be explained on the basis of the following flow chart:
 
-![Aviablog Website flow chart](IMG/fllowchart.png)
+![Aviablog Website flow chart](./media/flowchart.jpeg)
 
 ### __Existing features__
 
@@ -23,7 +23,7 @@ A nice little touch is given with the website's logo in the top left corner, and
 
 The website's footer consists of a simple menu bringing the user to the AviaBlog social media platforms. A little note has to be made that the links are currently consisting of different platforms than Aviablog because we are still in the startup phase. 
 
-![The Aviablog website home screen](IMG/heroku.startscreen.png)
+![The Aviablog website home screen](./media/homescreen.png)
 
 - __The about screen__
 
@@ -31,13 +31,13 @@ The about screen is interesting in particular. Not only because of the interesti
 
 Underneath, it becomes more interesting. The user can read about our story by clicking a dropdown menu. Ater clicking the dropdown menu, the story that is being shown can be easily changed by the admin of the website by simply going to the admin environment and clicking on the abouts tap. Because the world of aviation is changing so fast, we decided to make the story about us adjustable very easily.
 
-![The Aviablog website about screen](IMG/heroku.generatingscreen.png)
+![The Aviablog website about screen](./media/about.png)
 
 - __The register screen__
 
 The register screen is rather simple as well. The user is being asked to provide us with a username of their choice, optionally their email address, their password, and a confirmation of their password. The user is also reminded that in case they are already signed up with us, they have to click the sign in link instead. The model of this screen has been written by code institute but the layout has been modified in CSS by me.
 
-  ![The Aviablog website register screen](IMG/heroku.questionscreen.png)
+  ![The Aviablog website register screen](./media/register.png)
 
 - __The login screen__
 
@@ -46,13 +46,13 @@ The login screen also reminds the user of registering first if this has not been
 After logging in, an alert message will appear for 2.5 seconds letting the user know the login has been successful.
 
 
-  ![The Aviablog website login screen](IMG/heroku.questionscreen.png)
+  ![The Aviablog website login screen](./media/login.png)
 
 - __The logout screen__
 
 The logout screen only consists of a question if the user is sure he or she wants to logout? If this is the case, a big green sign out bar have to be clicked. 
 
-    ![The Aviablog website login screen](IMG/heroku.questionscreen.png)
+  ![The Aviablog website login screen](./media/logout.png)
 
 
 ### __Features left to implement__
