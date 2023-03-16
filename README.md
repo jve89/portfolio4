@@ -21,7 +21,11 @@ A clean but simple nav bar is presented with 4 buttons. Namely the Home, About, 
 
 A nice little touch is given with the website's logo in the top left corner, and the website's slogan in the top right corner of the screen, which reads: 'Adventures of a Commercial Pilot'. 
 
-The website's footer consists of a simple menu bringing the user to the AviaBlog social media platforms. A little note has to be made that the links are currently consisting of different platforms than Aviablog because we are still in the startup phase. 
+The website's footer consists of a simple menu bringing the user to the AviaBlog social media platforms. A little note has to be made that the links are currently consisting of different platforms than Aviablog because we are still in the startup phase.
+
+The website also contains some custom made javascript located in a seperate javascript file to make all alert messages dissapear after 2.5 seconds.
+
+On top of that did I change the media queries to make the site more responive to smaller screens.
 
 ![The Aviablog website home screen](./media/homescreen.png)
 

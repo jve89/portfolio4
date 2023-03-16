@@ -7,10 +7,6 @@ from django.utils.text import slugify
 from django.shortcuts import redirect
 
 
-# def about(request):
-#     return render(request, 'about.html')
-
-
 class PostList(generic.ListView):
     model = Post
     queryset = Post.objects.filter(status=1).order_by("-created_on")
